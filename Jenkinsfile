@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Train') {
             steps {
-                sh 'docker build -f Dockerfile.train -t "$TRAINER" .'
+                sh 'docker build --pull -f Dockerfile.train -t "$TRAINER" .'
                 sh '''
                     docker rm -f "$WORKBENCH" >/dev/null 2>&1 || true
                     docker run -d --name "$WORKBENCH" "$TRAINER" sleep infinity
@@ -52,7 +52,7 @@ pipeline {
 
         stage('Package') {
             steps {
-                sh 'docker build -t "$IMAGE" .'
+                sh 'docker build --pull -t "$IMAGE" .'
             }
         }
 
