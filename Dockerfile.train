@@ -1,0 +1,7 @@
+# Training environment. Built once; the pip layer is cached, so every
+# subsequent build is fast. Code is NOT baked in -- the pipeline copies
+# it in at run time, so a code change never invalidates the deps layer.
+FROM python:3.12-slim
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+WORKDIR /work

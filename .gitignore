@@ -1,0 +1,6 @@
+# build OUTPUTS -- produced by the pipeline, never committed
+model.pkl
+metrics.json
+
+__pycache__/
+*.pyc
