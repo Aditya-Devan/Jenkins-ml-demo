@@ -919,7 +919,7 @@ ML inference through Kubernetes      ✅
 
 LinkedIn:
 
-[https://www.linkedin.com/in/aditya-devan-72a4832b/](https://www.linkedin.com/in/aditya-devan-72a4832b/)
+[https://www.linkedin.com/in/aditya-devan-72a4832b/](https://www.linkedin.com/in/aditya-devan19)
 
 Questions and suggestions are welcome. Open an issue or reach out.
 
