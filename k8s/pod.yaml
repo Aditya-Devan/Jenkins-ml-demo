@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inference
+  labels:
+    app: inference
+spec:
+  containers:
+    - name: api
+      image: adityadevan/inference:latest
+      ports:
+        - containerPort: 8000

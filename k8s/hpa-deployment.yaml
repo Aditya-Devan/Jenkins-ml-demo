@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inference-hpa-demo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inference-hpa-demo
+  template:
+    metadata:
+      labels:
+        app: inference-hpa-demo
+    spec:
+      containers:
+        - name: api
+          image: adityadevan/inference:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
